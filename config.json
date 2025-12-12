@@ -1,0 +1,60 @@
+{
+  "name": "GaeilgeMaster LC",
+  "full_name": "Irish Leaving Cert Gaeilge",
+  "emoji": "\ud83c\udf40",
+  "colors": {
+    "primary": "#10b981",
+    "secondary": "#059669",
+    "accent": "#f97316"
+  },
+  "topics": [
+    {
+      "id": "prose",
+      "icon": "\ud83d\udcd7",
+      "title": "Pr\u00f3s (Prose)",
+      "desc": "Gearrsc\u00e9alta, \u00farsc\u00e9alta, anail\u00eds"
+    },
+    {
+      "id": "filocht",
+      "icon": "\ud83d\udcdc",
+      "title": "Fil\u00edocht (Poetry)",
+      "desc": "D\u00e1nta, t\u00e9ama\u00ed, teicn\u00edc\u00ed"
+    },
+    {
+      "id": "litriu",
+      "icon": "\u270d\ufe0f",
+      "title": "Litri\u00fa & Gramadach",
+      "desc": "Spelling, grammar, s\u00e9imhi\u00fa, ur\u00fa"
+    },
+    {
+      "id": "aiste",
+      "icon": "\ud83d\udcdd",
+      "title": "An Aiste (Essay)",
+      "desc": "Aist\u00ed, tuairim\u00ed, scr\u00edbhneoireacht"
+    },
+    {
+      "id": "sraith",
+      "icon": "\ud83c\udfac",
+      "title": "Sraith Picti\u00far",
+      "desc": "Picture sequence, sc\u00e9al, cur s\u00edos"
+    },
+    {
+      "id": "comhra",
+      "icon": "\ud83d\udcac",
+      "title": "Comhr\u00e1 (Oral)",
+      "desc": "Conversation skills, pronunciation"
+    },
+    {
+      "id": "prose_auth",
+      "icon": "\ud83d\udc64",
+      "title": "Gn\u00e1thleibh\u00e9al Pr\u00f3s",
+      "desc": "Prescribed prose authors"
+    },
+    {
+      "id": "roinn_a",
+      "icon": "\ud83d\udccb",
+      "title": "Roinn A - Ceisteanna",
+      "desc": "Comprehension, questions"
+    }
+  ]
+}
