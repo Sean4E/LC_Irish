@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="theme-color" content="#0a0e14">
-    <meta name="description" content="GaeilgeMaster LC - Interactive Gaeilge Chemistry study app with flashcards, quizzes, periodic table, and more.">
+    <meta name="description" content="GaeilgeMaster LC - Interactive Irish Leaving Certificate Gaeilge study app with flashcards, quizzes, grammar, and more.">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="GaeilgeMaster LC">
@@ -636,15 +636,15 @@
             <nav class="nav">
                 <button class="nav-btn active" data-section="dashboard"><span class="icon">📊</span><span>Dashboard</span></button>
                 <button class="nav-btn" data-section="topics"><span class="icon">📚</span><span>Topics</span></button>
-                <button class="nav-btn" data-section="periodic"><span class="icon">⚛️</span><span>Periodic Table</span></button>
+                <button class="nav-btn" data-section="periodic"><span class="icon">📖</span><span>Gramadach</span></button>
                 <button class="nav-btn" data-section="flashcards"><span class="icon">🃏</span><span>Flashcards</span></button>
                 <button class="nav-btn" data-section="quiz"><span class="icon">❓</span><span>Quiz</span></button>
-                <button class="nav-btn" data-section="calculator"><span class="icon">🧮</span><span>Calculators</span></button>
-                <button class="nav-btn" data-section="formulas"><span class="icon">📐</span><span>Formulas</span></button>
+                <button class="nav-btn" data-section="calculator"><span class="icon">✍️</span><span>Writing Tools</span></button>
+                <button class="nav-btn" data-section="formulas"><span class="icon">📐</span><span>Frásaí</span></button>
                 <button class="nav-btn" data-section="mindmaps"><span class="icon">🧠</span><span>Mind Maps</span></button>
-                <button class="nav-btn" data-section="experiments"><span class="icon">🧪</span><span>Experiments</span></button>
-                <button class="nav-btn" data-section="dataTables"><span class="icon">📋</span><span>Data Tables</span></button>
-                <button class="nav-btn" data-section="glossary"><span class="icon">📖</span><span>Glossary</span></button>
+                <button class="nav-btn" data-section="experiments"><span class="icon">📝</span><span>Samplaí Scríofa</span></button>
+                <button class="nav-btn" data-section="dataTables"><span class="icon">📋</span><span>Táblaí</span></button>
+                <button class="nav-btn" data-section="glossary"><span class="icon">📚</span><span>Foclóir</span></button>
                 <button class="nav-btn" data-section="examMode"><span class="icon">🎯</span><span>Exam Mode</span></button>
             </nav>
         </div>
@@ -653,7 +653,7 @@
             <section class="section active" id="dashboard">
                 <div class="section-header">
                     <h1 class="section-title">Welcome back! 👋</h1>
-                    <p class="section-subtitle">Continue your chemistry journey</p>
+                    <p class="section-subtitle">Lean ar aghaidh le do thuras Gaeilge</p>
                 </div>
                 <div class="dashboard-grid">
                     <div>
@@ -663,7 +663,7 @@
                                 <a class="quick-action" data-goto="flashcards"><span class="icon">🃏</span><span class="label">Daily Review</span></a>
                                 <a class="quick-action" data-goto="quiz"><span class="icon">❓</span><span class="label">Practice Quiz</span></a>
                                 <a class="quick-action" data-goto="mindmaps"><span class="icon">🧠</span><span class="label">Mind Maps</span></a>
-                                <a class="quick-action" data-goto="calculator"><span class="icon">🧮</span><span class="label">Calculators</span></a>
+                                <a class="quick-action" data-goto="calculator"><span class="icon">📝</span><span class="label">Writing Tools</span></a>
                             </div>
                         </div>
                         <div class="card">
@@ -705,7 +705,7 @@
                             <h3 style="margin-bottom: 1rem; text-align: center;">⏰ Exam Countdown</h3>
                             <div id="examCountdown" style="text-align: center;">
                                 <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent-cyan);" id="daysUntilExam">--</div>
-                                <div style="color: var(--text-secondary); font-size: 0.9rem;">days until LC Chemistry</div>
+                                <div style="color: var(--text-secondary); font-size: 0.9rem;">days until LC Gaeilge</div>
                                 <div style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.5rem;" id="examDate">June 2025</div>
                             </div>
                         </div>
@@ -729,7 +729,7 @@
             <section class="section" id="topics">
                 <div class="section-header">
                     <h1 class="section-title">📚 Study Topics</h1>
-                    <p class="section-subtitle">Complete coverage of the LC Chemistry syllabus</p>
+                    <p class="section-subtitle">Siollabas iomlán na hArdteistiméireachta Gaeilge</p>
                 </div>
                 <div class="card-grid" id="topicsGrid"></div>
                 <div class="topic-view" id="topicView">
@@ -738,26 +738,23 @@
                 </div>
             </section>
 
-            <!-- Periodic Table -->
+            <!-- Grammar Reference -->
             <section class="section" id="periodic">
                 <div class="section-header">
-                    <h1 class="section-title">⚛️ Interactive Periodic Table</h1>
-                    <p class="section-subtitle">Click any element to learn more</p>
+                    <h1 class="section-title">📖 Gramadach na Gaeilge</h1>
+                    <p class="section-subtitle">Click any grammar rule to learn more</p>
+                </div>
+                <div class="card" style="margin-bottom: 1rem;">
+                    <div class="formula-categories">
+                        <button class="formula-cat-btn active" data-gramcat="verbs">Briathra (Verbs)</button>
+                        <button class="formula-cat-btn" data-gramcat="nouns">Ainmfhocail (Nouns)</button>
+                        <button class="formula-cat-btn" data-gramcat="adjectives">Aidiachtaí (Adjectives)</button>
+                        <button class="formula-cat-btn" data-gramcat="prepositions">Réamhfhocail (Prepositions)</button>
+                        <button class="formula-cat-btn" data-gramcat="mutations">Athruithe (Mutations)</button>
+                    </div>
                 </div>
                 <div class="card">
-                    <div class="periodic-container">
-                        <div class="periodic-table" id="periodicTable"></div>
-                    </div>
-                    <div class="periodic-legend">
-                        <div class="legend-item"><div class="legend-color" style="background: rgba(255, 0, 110, 0.3);"></div>Alkali</div>
-                        <div class="legend-item"><div class="legend-color" style="background: rgba(255, 190, 11, 0.3);"></div>Alkaline Earth</div>
-                        <div class="legend-item"><div class="legend-color" style="background: rgba(0, 212, 255, 0.2);"></div>Transition</div>
-                        <div class="legend-item"><div class="legend-color" style="background: rgba(131, 56, 236, 0.3);"></div>Post-Trans</div>
-                        <div class="legend-item"><div class="legend-color" style="background: rgba(0, 255, 136, 0.2);"></div>Metalloid</div>
-                        <div class="legend-item"><div class="legend-color" style="background: rgba(255, 255, 255, 0.1);"></div>Nonmetal</div>
-                        <div class="legend-item"><div class="legend-color" style="background: rgba(0, 255, 200, 0.3);"></div>Halogen</div>
-                        <div class="legend-item"><div class="legend-color" style="background: rgba(100, 100, 255, 0.3);"></div>Noble Gas</div>
-                    </div>
+                    <div id="grammarContent" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem;"></div>
                 </div>
             </section>
 
@@ -772,14 +769,16 @@
                         <div class="control-group">
                             <span class="control-label">Topic</span>
                             <select id="flashcardTopic">
-                                <option value="all">All Topics</option>
-                                <option value="atomic">Atomic Structure</option>
-                                <option value="bonding">Chemical Bonding</option>
-                                <option value="stoichiometry">Stoichiometry</option>
-                                <option value="organic">Organic Chemistry</option>
-                                <option value="acids">Acids & Bases</option>
-                                <option value="redox">Electrochemistry</option>
-                                <option value="rates">Rates & Equilibrium</option>
+                                <option value="all">Gach Topaic</option>
+                                <option value="prois">Próis (Prose)</option>
+                                <option value="filiocht">Filíocht (Poetry)</option>
+                                <option value="drama">Drámaíocht</option>
+                                <option value="gramadach">Gramadach (Grammar)</option>
+                                <option value="stair">Stair (History)</option>
+                                <option value="cursai">Cúrsaí Reatha (Current Affairs)</option>
+                                <option value="ceapadoireacht">Ceapadóireacht (Composition)</option>
+                                <option value="leamhthuiscint">Léamhthuiscint (Comprehension)</option>
+                                <option value="cluastuiscint">Cluastuiscint (Listening)</option>
                             </select>
                         </div>
                         <div style="margin-left: auto;">
@@ -855,85 +854,95 @@
                 </div>
             </section>
 
-            <!-- Calculator -->
+            <!-- Writing Tools / Uirlisí Scríbhneoireachta -->
             <section class="section" id="calculator">
                 <div class="section-header">
-                    <h1 class="section-title">🧮 Chemistry Calculators</h1>
-                    <p class="section-subtitle">Essential tools for solving chemistry problems</p>
+                    <h1 class="section-title">✍️ Uirlisí Scríbhneoireachta</h1>
+                    <p class="section-subtitle">Writing tools for your Irish compositions</p>
                 </div>
                 <div class="calculator-grid">
                     <div class="calc-card">
-                        <h3 class="calc-title">⚖️ Mole Calculator</h3>
+                        <h3 class="calc-title">📝 Áiritheoir Focal (Word Counter)</h3>
                         <div class="calc-form">
-                            <div class="input-group"><label>Mass (g)</label><input type="number" id="moleMass" placeholder="Enter mass"></div>
-                            <div class="input-group"><label>Molar Mass (g/mol)</label><input type="number" id="moleMolarMass" placeholder="Enter molar mass"></div>
-                            <button class="btn btn-primary" onclick="calculateMoles()">Calculate</button>
-                            <div class="calc-result"><div class="calc-result-label">Number of Moles</div><div class="calc-result-value" id="moleResult">—</div></div>
+                            <div class="input-group"><label>Scríobh do théacs anseo</label><textarea id="wordCountText" placeholder="Cuir isteach d'aiste..." rows="4" style="width:100%; resize:vertical;"></textarea></div>
+                            <button class="btn btn-primary" onclick="countWords()">Comhair Focail</button>
+                            <div class="calc-result"><div class="calc-result-label">Líon na bhFocal</div><div class="calc-result-value" id="wordCountResult">—</div></div>
+                            <div id="wordCountDetails" style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-secondary);"></div>
                         </div>
                     </div>
                     <div class="calc-card">
-                        <h3 class="calc-title">🧪 Concentration Calculator</h3>
+                        <h3 class="calc-title">⏱️ Amadóir Aiste (Essay Timer)</h3>
                         <div class="calc-form">
-                            <div class="input-group"><label>Number of Moles (mol)</label><input type="number" id="concMoles" placeholder="Enter moles"></div>
-                            <div class="input-group"><label>Volume (L)</label><input type="number" id="concVolume" placeholder="Enter volume"></div>
-                            <button class="btn btn-primary" onclick="calculateConcentration()">Calculate</button>
-                            <div class="calc-result"><div class="calc-result-label">Concentration (M)</div><div class="calc-result-value" id="concResult">—</div></div>
+                            <div class="input-group"><label>Teorainn ama (nóiméid)</label><input type="number" id="essayTimeLimit" placeholder="e.g., 45" value="45"></div>
+                            <button class="btn btn-primary" onclick="startEssayTimer()">Tosaigh</button>
+                            <button class="btn btn-secondary" onclick="stopEssayTimer()" style="margin-top:0.5rem;">Stop</button>
+                            <div class="calc-result"><div class="calc-result-label">Am Fágtha</div><div class="calc-result-value" id="essayTimerResult">45:00</div></div>
                         </div>
                     </div>
                     <div class="calc-card">
-                        <h3 class="calc-title">💧 Dilution (C₁V₁ = C₂V₂)</h3>
+                        <h3 class="calc-title">🔤 Séimhiú Checker</h3>
                         <div class="calc-form">
-                            <div class="input-group"><label>Initial Concentration (M)</label><input type="number" id="dilC1" placeholder="C₁"></div>
-                            <div class="input-group"><label>Initial Volume (mL)</label><input type="number" id="dilV1" placeholder="V₁"></div>
-                            <div class="input-group"><label>Final Concentration (M)</label><input type="number" id="dilC2" placeholder="C₂"></div>
-                            <button class="btn btn-primary" onclick="calculateDilution()">Calculate V₂</button>
-                            <div class="calc-result"><div class="calc-result-label">Final Volume (mL)</div><div class="calc-result-value" id="dilResult">—</div></div>
+                            <div class="input-group"><label>Focal (Word)</label><input type="text" id="seimhiuWord" placeholder="e.g., bean, fear, cat"></div>
+                            <button class="btn btn-primary" onclick="checkSeimhiu()">Seiceáil Séimhiú</button>
+                            <div class="calc-result"><div class="calc-result-label">Le Séimhiú</div><div class="calc-result-value" id="seimhiuResult">—</div></div>
                         </div>
                     </div>
                     <div class="calc-card">
-                        <h3 class="calc-title">📊 pH Calculator</h3>
+                        <h3 class="calc-title">📐 Struchtúr Aiste</h3>
                         <div class="calc-form">
-                            <div class="input-group"><label>[H⁺] Concentration (M)</label><input type="number" id="phConc" placeholder="e.g., 0.001" step="any"></div>
-                            <button class="btn btn-primary" onclick="calculatePH()">Calculate pH</button>
-                            <div class="calc-result"><div class="calc-result-label">pH Value</div><div class="calc-result-value" id="phResult">—</div></div>
+                            <div class="input-group"><label>Cineál Aiste</label>
+                                <select id="aisteType" style="width:100%; padding:0.5rem;">
+                                    <option value="diosporeacht">Díospóireacht</option>
+                                    <option value="sceal">Scéal</option>
+                                    <option value="oraid">Óráid</option>
+                                    <option value="dialann">Dialann</option>
+                                    <option value="alt">Alt Nuachtáin</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-primary" onclick="showAisteStructure()">Taispeáin Struchtúr</button>
+                            <div id="aisteStructureResult" style="margin-top: 1rem; font-size: 0.9rem; text-align: left;"></div>
                         </div>
                     </div>
                     <div class="calc-card">
-                        <h3 class="calc-title">💨 Ideal Gas Law (PV = nRT)</h3>
+                        <h3 class="calc-title">🔄 Urú Checker</h3>
                         <div class="calc-form">
-                            <div class="input-group"><label>Pressure (atm)</label><input type="number" id="gasP" placeholder="P"></div>
-                            <div class="input-group"><label>Volume (L)</label><input type="number" id="gasV" placeholder="V"></div>
-                            <div class="input-group"><label>Temperature (K)</label><input type="number" id="gasT" placeholder="T"></div>
-                            <button class="btn btn-primary" onclick="calculateGas()">Calculate n</button>
-                            <div class="calc-result"><div class="calc-result-label">Moles of Gas (n)</div><div class="calc-result-value" id="gasResult">—</div></div>
+                            <div class="input-group"><label>Focal (Word)</label><input type="text" id="uruWord" placeholder="e.g., bean, fear, cat"></div>
+                            <button class="btn btn-primary" onclick="checkUru()">Seiceáil Urú</button>
+                            <div class="calc-result"><div class="calc-result-label">Le hUrú</div><div class="calc-result-value" id="uruResult">—</div></div>
                         </div>
                     </div>
                     <div class="calc-card">
-                        <h3 class="calc-title">⚗️ Molar Mass Calculator</h3>
+                        <h3 class="calc-title">💡 Nathanna Cainte</h3>
                         <div class="calc-form">
-                            <div class="input-group"><label>Chemical Formula</label><input type="text" id="molarFormula" placeholder="e.g., H2SO4, NaCl"></div>
-                            <button class="btn btn-primary" onclick="calculateMolarMass()">Calculate</button>
-                            <div class="calc-result"><div class="calc-result-label">Molar Mass</div><div class="calc-result-value" id="molarMassResult">—</div></div>
-                            <div id="molarMassBreakdown" style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-secondary);"></div>
+                            <div class="input-group"><label>Catagóir</label>
+                                <select id="nathannaCategory" onchange="showNathanna()" style="width:100%; padding:0.5rem;">
+                                    <option value="tuairim">Tuairimí (Opinions)</option>
+                                    <option value="cur">Cur Síos (Descriptions)</option>
+                                    <option value="diosporeacht">Díospóireacht (Debate)</option>
+                                    <option value="sceal">Scéal (Story)</option>
+                                    <option value="mothucháin">Mothúcháin (Emotions)</option>
+                                </select>
+                            </div>
+                            <div id="nathannaList" style="margin-top: 1rem; font-size: 0.9rem; text-align: left; line-height: 1.8;"></div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Formulas -->
+            <!-- Frásaí Úsáideacha (Useful Phrases) -->
             <section class="section" id="formulas">
                 <div class="section-header">
-                    <h1 class="section-title">📐 Formula Reference</h1>
-                    <p class="section-subtitle">All the formulas you need for the LC Chemistry exam</p>
+                    <h1 class="section-title">📐 Frásaí Úsáideacha</h1>
+                    <p class="section-subtitle">Essential phrases for LC Gaeilge compositions</p>
                 </div>
                 <div class="formula-categories">
-                    <button class="formula-cat-btn active" data-category="all">All</button>
-                    <button class="formula-cat-btn" data-category="stoich">Stoichiometry</button>
-                    <button class="formula-cat-btn" data-category="gas">Gas Laws</button>
-                    <button class="formula-cat-btn" data-category="acids">Acids & Bases</button>
-                    <button class="formula-cat-btn" data-category="thermo">Thermochemistry</button>
-                    <button class="formula-cat-btn" data-category="rates">Rates</button>
-                    <button class="formula-cat-btn" data-category="redox">Electrochemistry</button>
+                    <button class="formula-cat-btn active" data-category="all">Gach Ceann</button>
+                    <button class="formula-cat-btn" data-category="tuairim">Tuairimí</button>
+                    <button class="formula-cat-btn" data-category="cursios">Cur Síos</button>
+                    <button class="formula-cat-btn" data-category="argoint">Argóint</button>
+                    <button class="formula-cat-btn" data-category="sceal">Scéal</button>
+                    <button class="formula-cat-btn" data-category="crioch">Críochnú</button>
+                    <button class="formula-cat-btn" data-category="mothuchan">Mothúcháin</button>
                 </div>
                 <div class="formula-list" id="formulaList"></div>
             </section>
@@ -946,17 +955,16 @@
                 </div>
                 <div class="card" style="margin-bottom: 1.5rem;">
                     <div class="control-group">
-                        <span class="control-label">Select Topic</span>
+                        <span class="control-label">Roghnaigh Topaic</span>
                         <select id="mindmapTopic" onchange="renderMindMap(this.value)">
-                            <option value="atomic">Atomic Structure</option>
-                            <option value="bonding">Chemical Bonding</option>
-                            <option value="stoichiometry">Stoichiometry & The Mole</option>
-                            <option value="organic">Organic Chemistry</option>
-                            <option value="acids">Acids & Bases</option>
-                            <option value="redox">Electrochemistry</option>
-                            <option value="rates">Rates & Equilibrium</option>
-                            <option value="gases">Gases</option>
-                            <option value="thermo">Thermochemistry</option>
+                            <option value="prois">Próis Liteartha</option>
+                            <option value="filiocht">Filíocht</option>
+                            <option value="drama">Drámaíocht</option>
+                            <option value="gramadach">Gramadach</option>
+                            <option value="ceapadoireacht">Ceapadóireacht</option>
+                            <option value="leamhthuiscint">Léamhthuiscint</option>
+                            <option value="cluastuiscint">Cluastuiscint</option>
+                            <option value="stair">Stair na Gaeilge</option>
                         </select>
                     </div>
                 </div>
@@ -1003,7 +1011,7 @@
             <!-- Glossary -->
             <section class="section" id="glossary">
                 <div class="section-header">
-                    <h1 class="section-title">📖 Chemistry Glossary</h1>
+                    <h1 class="section-title">📚 Foclóir Gaeilge</h1>
                     <p class="section-subtitle">Searchable definitions of key terms</p>
                 </div>
                 
@@ -1159,51 +1167,46 @@
 
     <script>
         // ==================== DATA ====================
-        const elements = [
-            { number: 1, symbol: 'H', name: 'Hydrogen', mass: 1.008, category: 'nonmetal', group: 1, period: 1, electronConfig: '1s¹', electronegativity: 2.20 },
-            { number: 2, symbol: 'He', name: 'Helium', mass: 4.003, category: 'noble', group: 18, period: 1, electronConfig: '1s²' },
-            { number: 3, symbol: 'Li', name: 'Lithium', mass: 6.941, category: 'alkali', group: 1, period: 2, electronConfig: '[He] 2s¹', electronegativity: 0.98 },
-            { number: 4, symbol: 'Be', name: 'Beryllium', mass: 9.012, category: 'alkaline', group: 2, period: 2, electronConfig: '[He] 2s²', electronegativity: 1.57 },
-            { number: 5, symbol: 'B', name: 'Boron', mass: 10.81, category: 'metalloid', group: 13, period: 2 },
-            { number: 6, symbol: 'C', name: 'Carbon', mass: 12.01, category: 'nonmetal', group: 14, period: 2, electronConfig: '[He] 2s² 2p²', electronegativity: 2.55 },
-            { number: 7, symbol: 'N', name: 'Nitrogen', mass: 14.01, category: 'nonmetal', group: 15, period: 2, electronConfig: '[He] 2s² 2p³', electronegativity: 3.04 },
-            { number: 8, symbol: 'O', name: 'Oxygen', mass: 16.00, category: 'nonmetal', group: 16, period: 2, electronConfig: '[He] 2s² 2p⁴', electronegativity: 3.44 },
-            { number: 9, symbol: 'F', name: 'Fluorine', mass: 19.00, category: 'halogen', group: 17, period: 2, electronConfig: '[He] 2s² 2p⁵', electronegativity: 3.98 },
-            { number: 10, symbol: 'Ne', name: 'Neon', mass: 20.18, category: 'noble', group: 18, period: 2 },
-            { number: 11, symbol: 'Na', name: 'Sodium', mass: 22.99, category: 'alkali', group: 1, period: 3, electronConfig: '[Ne] 3s¹', electronegativity: 0.93 },
-            { number: 12, symbol: 'Mg', name: 'Magnesium', mass: 24.31, category: 'alkaline', group: 2, period: 3, electronConfig: '[Ne] 3s²', electronegativity: 1.31 },
-            { number: 13, symbol: 'Al', name: 'Aluminium', mass: 26.98, category: 'post-transition', group: 13, period: 3 },
-            { number: 14, symbol: 'Si', name: 'Silicon', mass: 28.09, category: 'metalloid', group: 14, period: 3 },
-            { number: 15, symbol: 'P', name: 'Phosphorus', mass: 30.97, category: 'nonmetal', group: 15, period: 3 },
-            { number: 16, symbol: 'S', name: 'Sulfur', mass: 32.07, category: 'nonmetal', group: 16, period: 3, electronConfig: '[Ne] 3s² 3p⁴', electronegativity: 2.58 },
-            { number: 17, symbol: 'Cl', name: 'Chlorine', mass: 35.45, category: 'halogen', group: 17, period: 3, electronConfig: '[Ne] 3s² 3p⁵', electronegativity: 3.16 },
-            { number: 18, symbol: 'Ar', name: 'Argon', mass: 39.95, category: 'noble', group: 18, period: 3 },
-            { number: 19, symbol: 'K', name: 'Potassium', mass: 39.10, category: 'alkali', group: 1, period: 4, electronConfig: '[Ar] 4s¹', electronegativity: 0.82 },
-            { number: 20, symbol: 'Ca', name: 'Calcium', mass: 40.08, category: 'alkaline', group: 2, period: 4, electronConfig: '[Ar] 4s²', electronegativity: 1.00 },
-            { number: 21, symbol: 'Sc', name: 'Scandium', mass: 44.96, category: 'transition', group: 3, period: 4 },
-            { number: 22, symbol: 'Ti', name: 'Titanium', mass: 47.87, category: 'transition', group: 4, period: 4 },
-            { number: 23, symbol: 'V', name: 'Vanadium', mass: 50.94, category: 'transition', group: 5, period: 4 },
-            { number: 24, symbol: 'Cr', name: 'Chromium', mass: 52.00, category: 'transition', group: 6, period: 4 },
-            { number: 25, symbol: 'Mn', name: 'Manganese', mass: 54.94, category: 'transition', group: 7, period: 4 },
-            { number: 26, symbol: 'Fe', name: 'Iron', mass: 55.85, category: 'transition', group: 8, period: 4, electronConfig: '[Ar] 3d⁶ 4s²', electronegativity: 1.83 },
-            { number: 27, symbol: 'Co', name: 'Cobalt', mass: 58.93, category: 'transition', group: 9, period: 4 },
-            { number: 28, symbol: 'Ni', name: 'Nickel', mass: 58.69, category: 'transition', group: 10, period: 4 },
-            { number: 29, symbol: 'Cu', name: 'Copper', mass: 63.55, category: 'transition', group: 11, period: 4, electronConfig: '[Ar] 3d¹⁰ 4s¹', electronegativity: 1.90 },
-            { number: 30, symbol: 'Zn', name: 'Zinc', mass: 65.38, category: 'transition', group: 12, period: 4, electronConfig: '[Ar] 3d¹⁰ 4s²', electronegativity: 1.65 },
-            { number: 31, symbol: 'Ga', name: 'Gallium', mass: 69.72, category: 'post-transition', group: 13, period: 4 },
-            { number: 32, symbol: 'Ge', name: 'Germanium', mass: 72.63, category: 'metalloid', group: 14, period: 4 },
-            { number: 33, symbol: 'As', name: 'Arsenic', mass: 74.92, category: 'metalloid', group: 15, period: 4 },
-            { number: 34, symbol: 'Se', name: 'Selenium', mass: 78.97, category: 'nonmetal', group: 16, period: 4 },
-            { number: 35, symbol: 'Br', name: 'Bromine', mass: 79.90, category: 'halogen', group: 17, period: 4, electronConfig: '[Ar] 3d¹⁰ 4s² 4p⁵', electronegativity: 2.96 },
-            { number: 36, symbol: 'Kr', name: 'Krypton', mass: 83.80, category: 'noble', group: 18, period: 4 }
-        ];
-
-        const atomicMasses = {
-            'H': 1.008, 'He': 4.003, 'Li': 6.941, 'Be': 9.012, 'B': 10.81, 'C': 12.01,
-            'N': 14.01, 'O': 16.00, 'F': 19.00, 'Ne': 20.18, 'Na': 22.99, 'Mg': 24.31,
-            'Al': 26.98, 'Si': 28.09, 'P': 30.97, 'S': 32.07, 'Cl': 35.45, 'Ar': 39.95,
-            'K': 39.10, 'Ca': 40.08, 'Fe': 55.85, 'Cu': 63.55, 'Zn': 65.38, 'Br': 79.90,
-            'Ag': 107.9, 'I': 126.9, 'Ba': 137.3, 'Au': 197.0, 'Pb': 207.2
+        const grammarRules = {
+            verbs: [
+                { rule: 'Aimsir Chaite', def: 'Past tense - actions completed in the past', example: 'Chuaigh mé (I went), D\'ith sé (He ate)' },
+                { rule: 'Aimsir Láithreach', def: 'Present tense - current or habitual actions', example: 'Téim (I go), Ithim (I eat)' },
+                { rule: 'Aimsir Fháistineach', def: 'Future tense - actions yet to happen', example: 'Rachaidh mé (I will go), Íosfaidh sé (He will eat)' },
+                { rule: 'Modh Coinníollach', def: 'Conditional mood - would/could actions', example: 'Rachainn (I would go), D\'íosfainn (I would eat)' },
+                { rule: 'Briathar Saor', def: 'Autonomous verb form - passive voice', example: 'Déantar (It is done), Óltar (It is drunk)' },
+                { rule: 'An Chopail', def: 'The copula "is" - for identification/classification', example: 'Is múinteoir mé (I am a teacher)' },
+                { rule: 'Briathra Neamhrialta', def: 'Irregular verbs - 11 common irregular verbs', example: 'Bí, Téigh, Tar, Faigh, Déan, Feic, Clois, Abair, Beir, Ith, Tabhair' },
+                { rule: 'Foirmeacha Diúltacha', def: 'Negative forms - Ní, Níor, Ní raibh', example: 'Ní théim (I don\'t go), Níor chuaigh mé (I didn\'t go)' }
+            ],
+            nouns: [
+                { rule: 'An Tuiseal Ainmneach', def: 'Nominative case - subject of sentence', example: 'An fear (The man), An bhean (The woman)' },
+                { rule: 'An Tuiseal Ginideach', def: 'Genitive case - possession/of', example: 'Teach an fhir (The man\'s house)' },
+                { rule: 'Inscne', def: 'Gender - masculine (firinscneach) or feminine (baininscneach)', example: 'An bord (m), An fhuinneog (f)' },
+                { rule: 'Uimhir Iolra', def: 'Plural forms - various plural endings', example: 'buachaillí, mná, fir, cailíní' },
+                { rule: 'Díochlaonadh 1-5', def: 'Five declension patterns for nouns', example: 'bád→báid, bróg→bróige' },
+                { rule: 'An tAlt', def: 'The definite article "an" and "na"', example: 'An fear, Na fir, An bhean, Na mná' }
+            ],
+            adjectives: [
+                { rule: 'Aidiacht tar éis Ainmfhocail', def: 'Adjectives follow nouns and agree in gender', example: 'fear mór (big man), bean mhór (big woman)' },
+                { rule: 'Céimeanna Comparáide', def: 'Comparison forms - positive, comparative, superlative', example: 'mór, níos mó, is mó' },
+                { rule: 'Séimhiú ar Aidiachtaí', def: 'Lenition after feminine nouns', example: 'bean bhreá (beautiful woman)' },
+                { rule: 'Aidiachtaí Sealbhacha', def: 'Possessive adjectives - mo, do, a, ár, bhur, a', example: 'mo theach (my house), a teach (his house)' },
+                { rule: 'Réimír "An-"', def: 'The prefix "an-" for "very" - causes lenition', example: 'an-mhaith (very good)' }
+            ],
+            prepositions: [
+                { rule: 'Réamhfhocail Shimplí', def: 'Simple prepositions - ag, ar, as, chuig, de, do, faoi, i, le, ó, roimh, thar, trí, um', example: 'ar an mbord (on the table)' },
+                { rule: 'Forainmneacha Réamhfhoclacha', def: 'Prepositional pronouns', example: 'agam, agat, aige, aici, againn, agaibh, acu' },
+                { rule: 'Réamhfhocal + Alt', def: 'Preposition + article combinations', example: 'sa, san, den, don, faoin, leis an' },
+                { rule: 'Urú tar éis Réamhfhocal', def: 'Eclipsis after certain prepositions', example: 'ar an mbord, sa gcarr, i gCorcaigh' }
+            ],
+            mutations: [
+                { rule: 'Séimhiú', def: 'Lenition - softening of consonants (h added)', example: 'b→bh, c→ch, d→dh, f→fh, g→gh, m→mh, p→ph, s→sh, t→th' },
+                { rule: 'Urú', def: 'Eclipsis - prefix letters added', example: 'b→mb, c→gc, d→nd, f→bhf, g→ng, p→bp, t→dt' },
+                { rule: 'h roimh Ghuta', def: 'h before vowels after certain words', example: 'go hÉirinn, le hÁine, a hathair' },
+                { rule: 'Séimhiú tar éis An', def: 'Lenition after "an" with feminine nouns', example: 'an bhean, an fhuinneog, an tseachtain' },
+                { rule: 't roimh s', def: 't- prefix before s- with masculine nouns + "an"', example: 'an tsamhradh, an tsúil' },
+                { rule: 'Séimhiú san Aimsir Chaite', def: 'Lenition in past tense', example: 'Chuaigh, Bhí, Tháinig, Dhún' }
+            ]
         };
 
         const topics = [
@@ -1381,7 +1384,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             createMolecules();
             initNavigation();
-            initPeriodicTable();
+            initGrammar();
             initTopics();
             initFlashcards();
             initQuiz();
@@ -1454,51 +1457,47 @@
             setTimeout(() => showTopicContent(topicId), 100);
         }
 
-        // ==================== PERIODIC TABLE ====================
-        function initPeriodicTable() {
-            const table = document.getElementById('periodicTable');
-            const layout = [
-                [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2],
-                [3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 6, 7, 8, 9, 10],
-                [11, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 14, 15, 16, 17, 18],
-                [19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36]
-            ];
-            layout.forEach(row => {
-                row.forEach(num => {
-                    if (num === 0) {
-                        const spacer = document.createElement('div');
-                        spacer.className = 'element-spacer';
-                        table.appendChild(spacer);
-                    } else {
-                        const el = elements.find(e => e.number === num);
-                        if (el) {
-                            const elem = document.createElement('div');
-                            elem.className = `element ${el.category}`;
-                            elem.innerHTML = `<span class="number">${el.number}</span><span class="symbol">${el.symbol}</span><span class="name">${el.name}</span>`;
-                            elem.addEventListener('click', () => showElementModal(el));
-                            table.appendChild(elem);
-                        }
-                    }
+        // ==================== GRAMMAR REFERENCE ====================
+        let currentGrammarCategory = 'verbs';
+
+        function initGrammar() {
+            renderGrammar('verbs');
+            document.querySelectorAll('[data-gramcat]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('[data-gramcat]').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    renderGrammar(btn.dataset.gramcat);
                 });
             });
         }
 
-        function showElementModal(el) {
+        function renderGrammar(category) {
+            currentGrammarCategory = category;
+            const container = document.getElementById('grammarContent');
+            const rules = grammarRules[category] || [];
+            container.innerHTML = rules.map(r => `
+                <div class="card" style="padding: 1rem; cursor: pointer; transition: all 0.3s;" onclick="showRuleDetail('${r.rule.replace(/'/g, "\\'")}', '${r.def.replace(/'/g, "\\'")}', '${r.example.replace(/'/g, "\\'")}')">
+                    <h4 style="color: var(--accent-cyan); margin-bottom: 0.5rem;">${r.rule}</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">${r.def}</p>
+                    <p style="color: var(--text-muted); font-size: 0.8rem; font-style: italic;">Sampla: ${r.example}</p>
+                </div>
+            `).join('');
+        }
+
+        function showRuleDetail(rule, def, example) {
             const modal = document.getElementById('elementModal');
             const body = document.getElementById('elementModalBody');
-            const catNames = { 'alkali': 'Alkali Metal', 'alkaline': 'Alkaline Earth Metal', 'transition': 'Transition Metal', 'post-transition': 'Post-Transition Metal', 'metalloid': 'Metalloid', 'nonmetal': 'Nonmetal', 'halogen': 'Halogen', 'noble': 'Noble Gas' };
             body.innerHTML = `
-                <div class="element-detail-header">
-                    <div class="element-big ${el.category}"><span class="number">${el.number}</span><span class="symbol">${el.symbol}</span></div>
-                    <div class="element-info"><h2>${el.name}</h2><p>${catNames[el.category] || el.category}</p></div>
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <h2 style="color: var(--accent-cyan); font-size: 1.5rem; margin-bottom: 0.5rem;">${rule}</h2>
                 </div>
-                <div class="element-properties">
-                    <div class="property"><div class="property-label">Atomic Mass</div><div class="property-value">${el.mass} u</div></div>
-                    <div class="property"><div class="property-label">Atomic Number</div><div class="property-value">${el.number}</div></div>
-                    <div class="property"><div class="property-label">Group</div><div class="property-value">${el.group || 'N/A'}</div></div>
-                    <div class="property"><div class="property-label">Period</div><div class="property-value">${el.period || 'N/A'}</div></div>
-                    ${el.electronConfig ? `<div class="property"><div class="property-label">Electron Config</div><div class="property-value" style="font-size: 0.85rem;">${el.electronConfig}</div></div>` : ''}
-                    ${el.electronegativity ? `<div class="property"><div class="property-label">Electronegativity</div><div class="property-value">${el.electronegativity}</div></div>` : ''}
+                <div style="margin-bottom: 1.5rem;">
+                    <h4 style="color: var(--text-secondary); margin-bottom: 0.5rem;">Míniú (Definition)</h4>
+                    <p style="line-height: 1.6;">${def}</p>
+                </div>
+                <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: var(--radius-sm);">
+                    <h4 style="color: var(--accent-green); margin-bottom: 0.5rem;">Sampla (Example)</h4>
+                    <p style="font-style: italic; line-height: 1.6;">${example}</p>
                 </div>`;
             modal.classList.add('active');
         }
@@ -1652,22 +1651,77 @@
         }
         function quitQuiz() { document.getElementById('quizArea').style.display = 'none'; document.getElementById('quizSetup').style.display = 'block'; }
 
-        // ==================== CALCULATORS ====================
-        function calculateMoles() { const mass = parseFloat(document.getElementById('moleMass').value), molarMass = parseFloat(document.getElementById('moleMolarMass').value); if (!isNaN(mass) && !isNaN(molarMass) && molarMass !== 0) document.getElementById('moleResult').textContent = (mass / molarMass).toFixed(4) + ' mol'; }
-        function calculateConcentration() { const moles = parseFloat(document.getElementById('concMoles').value), volume = parseFloat(document.getElementById('concVolume').value); if (!isNaN(moles) && !isNaN(volume) && volume !== 0) document.getElementById('concResult').textContent = (moles / volume).toFixed(4) + ' M'; }
-        function calculateDilution() { const c1 = parseFloat(document.getElementById('dilC1').value), v1 = parseFloat(document.getElementById('dilV1').value), c2 = parseFloat(document.getElementById('dilC2').value); if (!isNaN(c1) && !isNaN(v1) && !isNaN(c2) && c2 !== 0) document.getElementById('dilResult').textContent = ((c1 * v1) / c2).toFixed(2) + ' mL'; }
-        function calculatePH() { const conc = parseFloat(document.getElementById('phConc').value); if (!isNaN(conc) && conc > 0) document.getElementById('phResult').textContent = (-Math.log10(conc)).toFixed(2); }
-        function calculateGas() { const P = parseFloat(document.getElementById('gasP').value), V = parseFloat(document.getElementById('gasV').value), T = parseFloat(document.getElementById('gasT').value); if (!isNaN(P) && !isNaN(V) && !isNaN(T) && T !== 0) document.getElementById('gasResult').textContent = ((P * V) / (0.0821 * T)).toFixed(4) + ' mol'; }
-        function calculateMolarMass() {
-            const formula = document.getElementById('molarFormula').value.trim();
-            if (!formula) return;
-            const parsed = {}, regex = /([A-Z][a-z]?)(\d*)/g; let match;
-            while ((match = regex.exec(formula)) !== null) { parsed[match[1]] = (parsed[match[1]] || 0) + (match[2] ? parseInt(match[2]) : 1); }
-            let total = 0, breakdown = [];
-            for (const [el, count] of Object.entries(parsed)) { const mass = atomicMasses[el]; if (mass) { total += mass * count; breakdown.push(`${el}: ${mass} × ${count} = ${(mass * count).toFixed(2)}`); } }
-            document.getElementById('molarMassResult').textContent = total.toFixed(2) + ' g/mol';
-            document.getElementById('molarMassBreakdown').innerHTML = breakdown.join('<br>');
+        // ==================== WRITING TOOLS (UIRLISÍ SCRÍBHNEOIREACHTA) ====================
+        function countWords() {
+            const text = document.getElementById('wordCountText').value.trim();
+            if (!text) { document.getElementById('wordCountResult').textContent = '0'; document.getElementById('wordCountDetails').textContent = ''; return; }
+            const words = text.split(/\s+/).filter(w => w.length > 0).length;
+            const chars = text.length;
+            const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0).length;
+            document.getElementById('wordCountResult').textContent = words + ' focal';
+            document.getElementById('wordCountDetails').innerHTML = `Carachtair: ${chars} | Abairtí: ${sentences}`;
         }
+        let essayTimerInterval = null;
+        function startEssayTimer() {
+            if (essayTimerInterval) clearInterval(essayTimerInterval);
+            let minutes = parseInt(document.getElementById('essayTimeLimit').value) || 45;
+            let seconds = minutes * 60;
+            const display = document.getElementById('essayTimerResult');
+            essayTimerInterval = setInterval(() => {
+                const m = Math.floor(seconds / 60), s = seconds % 60;
+                display.textContent = `${m}:${s.toString().padStart(2, '0')}`;
+                if (seconds <= 0) { clearInterval(essayTimerInterval); display.textContent = 'Am istigh!'; }
+                seconds--;
+            }, 1000);
+        }
+        function stopEssayTimer() { if (essayTimerInterval) { clearInterval(essayTimerInterval); essayTimerInterval = null; } }
+        function checkSeimhiu() {
+            const word = document.getElementById('seimhiuWord').value.trim().toLowerCase();
+            if (!word) return;
+            const seimhiuChars = { 'b': 'bh', 'c': 'ch', 'd': 'dh', 'f': 'fh', 'g': 'gh', 'm': 'mh', 'p': 'ph', 's': 'sh', 't': 'th' };
+            const first = word.charAt(0);
+            if (seimhiuChars[first]) {
+                document.getElementById('seimhiuResult').textContent = seimhiuChars[first] + word.slice(1);
+            } else {
+                document.getElementById('seimhiuResult').textContent = word + ' (ní athraíonn)';
+            }
+        }
+        function checkUru() {
+            const word = document.getElementById('uruWord').value.trim().toLowerCase();
+            if (!word) return;
+            const uruChars = { 'b': 'mb', 'c': 'gc', 'd': 'nd', 'f': 'bhf', 'g': 'ng', 'p': 'bp', 't': 'dt' };
+            const first = word.charAt(0);
+            if (uruChars[first]) {
+                document.getElementById('uruResult').textContent = uruChars[first] + word.slice(1);
+            } else if ('aeiouáéíóú'.includes(first)) {
+                document.getElementById('uruResult').textContent = 'n-' + word;
+            } else {
+                document.getElementById('uruResult').textContent = word + ' (ní athraíonn)';
+            }
+        }
+        function showAisteStructure() {
+            const type = document.getElementById('aisteType').value;
+            const structures = {
+                diosporeacht: '<strong>Díospóireacht:</strong><br>1. Réamhrá - luaigh an t-ábhar<br>2. Argóint 1 (ar son)<br>3. Argóint 2 (ar son)<br>4. Argóint 3 (i gcoinne)<br>5. Do thuairim féin<br>6. Conclúid láidir',
+                sceal: '<strong>Scéal:</strong><br>1. Tús tarraingteach<br>2. Forbairt na gcarachtar<br>3. An choimhlint/fadhb<br>4. Buaicphointe<br>5. Réiteach<br>6. Deireadh suimiúil',
+                oraid: '<strong>Óráid:</strong><br>1. Beannú + a chairde<br>2. Réamhrá láidir<br>3. Príomhphointe 1<br>4. Príomhphointe 2<br>5. Glaoch chun gnímh<br>6. Críochnú spreagúil',
+                dialann: '<strong>Dialann:</strong><br>1. Dáta + a dhialann dhílis<br>2. Cur síos ar an lá<br>3. Do mhothúcháin<br>4. Machnamh<br>5. Súil chun cinn<br>6. Slán go fóill',
+                alt: '<strong>Alt Nuachtáin:</strong><br>1. Ceannlíne tharraingteach<br>2. An cúlra<br>3. Na sonraí<br>4. Tuairimí<br>5. An todhchaí<br>6. Conclúid'
+            };
+            document.getElementById('aisteStructureResult').innerHTML = structures[type] || '';
+        }
+        function showNathanna() {
+            const cat = document.getElementById('nathannaCategory').value;
+            const nathanna = {
+                tuairim: 'Is léir dom, Dar liom, Ceapaim go, Is dóigh liom, Measaim go, Táim den tuairim, Creidim go láidir, Ní aontaím in aon chor',
+                cur: 'Bhí sé go hálainn, Chuaigh mé go, D\'fhan mé ann, Chonaic mé, Bhain mé sult as, Bhí an ghrian ag taitneamh, Bhí an lá fuar/te, Bhí áthas/brón orm',
+                diosporeacht: 'Ar an taobh eile, Mar sin féin, Ach ar an láimh eile, Is fiú a rá go, Ní féidir a shéanadh, Caithfidh mé a admháil, Tá sé soiléir go',
+                sceal: 'Lá breá samhraidh a bhí ann, Go tobann, Gan choinne, I bhfaiteadh na súl, Ar deireadh thiar thall, Faoi dheireadh, Agus sin mar a tharla',
+                mothucháin: 'Bhí áthas orm, Bhí brón orm, Bhí fearg orm, Bhí eagla orm, Bhí ionadh orm, Bhí díomá orm, Bhí aiféala orm, Bhí ríméad orm'
+            };
+            document.getElementById('nathannaList').innerHTML = nathanna[cat] ? nathanna[cat].split(', ').map(n => `<span style="display:inline-block; background:var(--bg-tertiary); padding:0.25rem 0.5rem; border-radius:4px; margin:0.25rem;">${n}</span>`).join('') : '';
+        }
+        document.addEventListener('DOMContentLoaded', () => { showNathanna(); });
 
         // ==================== FORMULAS ====================
         function initFormulas() { renderFormulas('all'); document.querySelectorAll('.formula-cat-btn').forEach(btn => { btn.addEventListener('click', () => { document.querySelectorAll('.formula-cat-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); renderFormulas(btn.dataset.category); }); }); }
@@ -2054,7 +2108,7 @@
         let userProgress = {};
         
         function loadProgress() {
-            userProgress = JSON.parse(localStorage.getItem('chemProgress') || '{}');
+            userProgress = JSON.parse(localStorage.getItem('gaeilgeProgress') || '{}');
             // Update topics array with saved progress
             topics.forEach(topic => {
                 if (userProgress[topic.id]) {
@@ -2068,7 +2122,7 @@
             if (!userProgress[topicId]) userProgress[topicId] = {};
             userProgress[topicId].progress = progressValue;
             userProgress[topicId].lastViewed = Date.now();
-            localStorage.setItem('chemProgress', JSON.stringify(userProgress));
+            localStorage.setItem('gaeilgeProgress', JSON.stringify(userProgress));
             
             // Update topic in array
             const topic = topics.find(t => t.id === topicId);
@@ -2104,7 +2158,7 @@
 
         // ==================== EXAM COUNTDOWN ====================
         function initExamCountdown() {
-            // LC Chemistry typically in June
+            // LC Gaeilge typically in June
             const examDate = new Date('2025-06-11'); // Approximate LC date
             const today = new Date();
             const diffTime = examDate - today;
