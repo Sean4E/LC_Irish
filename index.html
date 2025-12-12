@@ -1207,140 +1207,167 @@
         };
 
         const topics = [
-            { id: 'atomic', icon: '⚛️', title: 'Atomic Structure', desc: 'Atoms, subatomic particles, electron configuration, isotopes', lessons: 8, questions: 45, progress: 0, content: '<h2>Atomic Structure</h2><h3>The Atom</h3><p>An atom is the smallest particle of an element that retains the chemical properties of that element. Atoms consist of three types of subatomic particles:</p><ul><li><strong>Protons</strong> - positively charged particles found in the nucleus</li><li><strong>Neutrons</strong> - neutral particles found in the nucleus</li><li><strong>Electrons</strong> - negatively charged particles orbiting the nucleus</li></ul><div class="key-point"><div class="key-point-title">Key Definition</div><p><strong>Atomic Number (Z)</strong> = Number of protons<br><strong>Mass Number (A)</strong> = Protons + Neutrons</p></div><h3>Isotopes</h3><p>Isotopes are atoms of the same element with the same number of protons but different numbers of neutrons.</p><h3>Electron Configuration</h3><p>Electrons are arranged in energy levels (shells) around the nucleus. The maximum number of electrons in each shell is given by 2n².</p>' },
-            { id: 'bonding', icon: '🔗', title: 'Chemical Bonding', desc: 'Ionic, covalent, metallic bonding, electronegativity, shapes', lessons: 10, questions: 52, progress: 0, content: '<h2>Chemical Bonding</h2><h3>Ionic Bonding</h3><p>Ionic bonds form between metals and non-metals through the transfer of electrons.</p><div class="key-point"><div class="key-point-title">Properties of Ionic Compounds</div><ul><li>High melting and boiling points</li><li>Conduct electricity when molten or dissolved</li><li>Form crystalline lattice structures</li></ul></div><h3>Covalent Bonding</h3><p>Covalent bonds form between non-metals through the sharing of electron pairs.</p><h3>Electronegativity</h3><p>Electronegativity is the ability of an atom to attract shared electrons towards itself in a covalent bond.</p>' },
-            { id: 'stoichiometry', icon: '⚖️', title: 'Stoichiometry & The Mole', desc: 'Mole concept, calculations, limiting reagents, yields', lessons: 12, questions: 68, progress: 0, content: '<h2>Stoichiometry & The Mole</h2><h3>The Mole Concept</h3><p>The mole is the SI unit for amount of substance. One mole contains exactly 6.022 × 10²³ particles (Avogadro\'s number).</p><div class="key-point"><div class="key-point-title">Key Formulae</div><p>Number of moles (n) = mass (m) / molar mass (M)<br>Number of moles (n) = number of particles / 6.022 × 10²³<br>Number of moles (n) = volume (L) / 22.4 (at STP for gases)</p></div>' },
-            { id: 'organic', icon: '🧬', title: 'Organic Chemistry', desc: 'Hydrocarbons, functional groups, reactions, polymers', lessons: 15, questions: 85, progress: 0, content: '<h2>Organic Chemistry</h2><h3>Hydrocarbons</h3><div class="key-point"><div class="key-point-title">Homologous Series</div><ul><li><strong>Alkanes</strong> (CₙH₂ₙ₊₂): Single bonds only</li><li><strong>Alkenes</strong> (CₙH₂ₙ): Contains C=C double bond</li><li><strong>Alkynes</strong> (CₙH₂ₙ₋₂): Contains C≡C triple bond</li></ul></div><h3>Functional Groups</h3><ul><li><strong>Alcohols (-OH)</strong></li><li><strong>Aldehydes (-CHO)</strong></li><li><strong>Ketones (C=O)</strong></li><li><strong>Carboxylic acids (-COOH)</strong></li><li><strong>Esters (-COO-)</strong></li></ul>' },
-            { id: 'acids', icon: '🧫', title: 'Acids & Bases', desc: 'pH, neutralisation, titrations, buffer solutions', lessons: 9, questions: 55, progress: 0, content: '<h2>Acids & Bases</h2><div class="key-point"><div class="key-point-title">Brønsted-Lowry Definition</div><p><strong>Acid:</strong> Proton (H⁺) donor<br><strong>Base:</strong> Proton (H⁺) acceptor</p></div><h3>The pH Scale</h3><p>pH = -log₁₀[H⁺]</p><ul><li>pH < 7: Acidic</li><li>pH = 7: Neutral</li><li>pH > 7: Basic/alkaline</li></ul><h3>Neutralisation</h3><p>Acid + Base → Salt + Water</p>' },
-            { id: 'redox', icon: '🔋', title: 'Electrochemistry', desc: 'Oxidation, reduction, electrochemical cells, electrolysis', lessons: 11, questions: 48, progress: 0, content: '<h2>Electrochemistry</h2><div class="key-point"><div class="key-point-title">Remember: OIL RIG</div><p><strong>O</strong>xidation <strong>I</strong>s <strong>L</strong>oss (of electrons)<br><strong>R</strong>eduction <strong>I</strong>s <strong>G</strong>ain (of electrons)</p></div><h3>Electrolysis</h3><p>Electrolysis uses electrical energy to drive a non-spontaneous reaction.</p><ul><li>Oxidation occurs at the anode (positive)</li><li>Reduction occurs at the cathode (negative)</li></ul>' },
-            { id: 'rates', icon: '⏱️', title: 'Rates & Equilibrium', desc: 'Reaction rates, factors affecting rate, Le Chatelier', lessons: 10, questions: 42, progress: 0, content: '<h2>Rates of Reaction & Equilibrium</h2><h3>Factors Affecting Rate</h3><ol><li><strong>Temperature:</strong> Higher = faster</li><li><strong>Concentration:</strong> Higher = faster</li><li><strong>Surface area:</strong> Greater = faster</li><li><strong>Catalyst:</strong> Provides alternative pathway</li><li><strong>Pressure:</strong> (for gases) Higher = faster</li></ol><div class="key-point"><div class="key-point-title">Le Chatelier\'s Principle</div><p>When a system at equilibrium is disturbed, it will shift to counteract the change.</p></div>' },
-            { id: 'gases', icon: '💨', title: 'Gases', desc: 'Gas laws, ideal gas equation, kinetic theory', lessons: 7, questions: 38, progress: 0, content: '<h2>Gases</h2><div class="key-point"><div class="key-point-title">Ideal Gas Equation</div><p><strong>PV = nRT</strong></p><ul><li>P = Pressure</li><li>V = Volume</li><li>n = Moles</li><li>R = Gas constant (8.314 J/mol·K)</li><li>T = Temperature (Kelvin)</li></ul></div><p>At STP (0°C, 1 atm), one mole of any ideal gas occupies 22.4 L</p>' },
-            { id: 'thermo', icon: '🔥', title: 'Thermochemistry', desc: 'Enthalpy, Hess\'s law, bond energies, calorimetry', lessons: 8, questions: 40, progress: 0, content: '<h2>Thermochemistry</h2><div class="key-point"><div class="key-point-title">Exothermic vs Endothermic</div><p><strong>Exothermic (ΔH < 0):</strong> Heat released<br><strong>Endothermic (ΔH > 0):</strong> Heat absorbed</p></div><h3>Heat Energy</h3><p><strong>q = mcΔT</strong></p><ul><li>q = heat energy (J)</li><li>m = mass (g)</li><li>c = specific heat capacity</li><li>ΔT = temperature change</li></ul>' },
-            { id: 'environmental', icon: '🌍', title: 'Environmental Chemistry', desc: 'Water treatment, atmosphere, pollution, green chemistry', lessons: 6, questions: 32, progress: 0, content: '<h2>Environmental Chemistry</h2><h3>Water Treatment</h3><ol><li>Screening</li><li>Settling/Sedimentation</li><li>Filtration</li><li>Chlorination</li><li>Fluoridation</li><li>pH adjustment</li></ol><h3>Pollution</h3><ul><li><strong>Acid rain:</strong> Caused by SO₂ and NOₓ</li><li><strong>Greenhouse effect:</strong> CO₂, CH₄, N₂O</li><li><strong>Ozone depletion:</strong> CFCs</li></ul>' }
+            { id: 'prois', icon: '📝', title: 'Prós (Prose)', desc: 'Gearrscéalta, úrscéalta, an Triail', lessons: 12, questions: 55, progress: 0, content: '<h2>Prós - Prose</h2><h3>An Triail</h3><p>Dráma le Máiréad Ní Ghráda. Scéal Mháire Ní Chathasaigh agus an triail a cuireadh uirthi.</p><div class="key-point"><div class="key-point-title">Téamaí</div><ul><li>Éagóir na sochaí</li><li>Hipicríteacht</li><li>Uaigneas agus aonrú</li><li>Ról na mban</li></ul></div><h3>Gearrscéalta</h3><p>Gearrscéalta ar an gcúrsa: Hurlamaboc, Oisín i dTír na nÓg, Dis, An Gnáthrud, srl.</p>' },
+            { id: 'filiocht', icon: '📜', title: 'Filíocht (Poetry)', desc: 'Dánta, filí, teicnící filíochta', lessons: 15, questions: 60, progress: 0, content: '<h2>Filíocht - Poetry</h2><h3>Filí ar an gCúrsa</h3><p>Staidéar ar dhánta ó fhilí éagsúla ar an siollabas.</p><div class="key-point"><div class="key-point-title">Teicnící Filíochta</div><ul><li><strong>Meafar:</strong> Comparáid dhíreach</li><li><strong>Samhail:</strong> Cosúil le / mar</li><li><strong>Pearsantú:</strong> Tréithe daonna</li><li><strong>Uaim:</strong> Athrá fuaimeanna</li></ul></div>' },
+            { id: 'ceapadoireacht', icon: '✍️', title: 'Ceapadóireacht', desc: 'Aistí, scéalta, díospóireachtaí, óráidí', lessons: 14, questions: 48, progress: 0, content: '<h2>Ceapadóireacht - Composition</h2><h3>Cineálacha Aistí</h3><div class="key-point"><div class="key-point-title">Formáidí</div><ul><li><strong>Aiste phearsanta:</strong> Tuairimí, mothúcháin</li><li><strong>Scéal:</strong> Insint cruthaitheach</li><li><strong>Díospóireacht:</strong> Argóintí ar son/i gcoinne</li><li><strong>Óráid:</strong> Áitithíocht, aontú</li><li><strong>Litir:</strong> Foirmiúil/neamhfhoirmiúil</li></ul></div>' },
+            { id: 'gramadach', icon: '📚', title: 'Gramadach', desc: 'Briathra, ainmfhocail, aidiachtaí, réamhfhocail', lessons: 18, questions: 70, progress: 0, content: '<h2>Gramadach - Grammar</h2><h3>Na Briathra</h3><div class="key-point"><div class="key-point-title">Aimsirí</div><ul><li><strong>Aimsir Láithreach:</strong> Bím, tá mé</li><li><strong>Aimsir Chaite:</strong> Bhí mé</li><li><strong>Aimsir Fháistineach:</strong> Beidh mé</li><li><strong>Modh Coinníollach:</strong> Bheinn</li></ul></div><h3>Tuisil</h3><p>Ainmneach, Ginideach, Tabharthach, Gairmeach</p>' },
+            { id: 'cluastuiscint', icon: '👂', title: 'Cluastuiscint', desc: 'Éisteacht, tuiscint, freagraí', lessons: 8, questions: 45, progress: 0, content: '<h2>Cluastuiscint - Aural</h2><h3>Straitéisí</h3><div class="key-point"><div class="key-point-title">Leideanna</div><ul><li>Léigh na ceisteanna ar dtús</li><li>Éist don phríomhsmaoineamh</li><li>Scríobh nótaí gairide</li><li>Bí ag súil le focail eochracha</li></ul></div><p>Cleachtadh rialta le podchraoladáin agus físeáin Ghaeilge.</p>' },
+            { id: 'leamhtuiscint', icon: '📖', title: 'Léamhthuiscint', desc: 'Léitheoireacht, tuiscint, anailís', lessons: 10, questions: 50, progress: 0, content: '<h2>Léamhthuiscint - Reading Comprehension</h2><h3>Teicnící</h3><div class="key-point"><div class="key-point-title">Straitéisí</div><ul><li>Scimeáil ar dtús</li><li>Aimsigh focail eochracha</li><li>Léigh go cúramach</li><li>Freagair i d'fhocail féin</li></ul></div><p>Léigh ábhar Gaeilge go rialta - nuachtáin, irisí, blaganna.</p>' },
+            { id: 'beal', icon: '🗣️', title: 'Scrúdú Béil', desc: 'Comhrá, pictiúr, sraith pictiúr', lessons: 10, questions: 40, progress: 0, content: '<h2>Scrúdú Béil - Oral Exam</h2><h3>Codanna</h3><div class="key-point"><div class="key-point-title">Struchtúr</div><ul><li><strong>Comhrá:</strong> Tú féin, do shaol, caitheamh aimsire</li><li><strong>Pictiúr:</strong> Cur síos ar íomhá</li><li><strong>Sraith Pictiúr:</strong> Scéal a insint</li></ul></div><p>Cleachtadh: Labhair Gaeilge gach lá má\'s féidir.</p>' },
+            { id: 'stair', icon: '🏛️', title: 'Stair na Gaeilge', desc: 'Seanchas, cultúr, traidisiún', lessons: 6, questions: 35, progress: 0, content: '<h2>Stair na Gaeilge - Irish History & Culture</h2><h3>Téamaí Cultúrtha</h3><div class="key-point"><div class="key-point-title">Ábhair</div><ul><li>An Ghaeltacht</li><li>Athbheochan na Gaeilge</li><li>Ceol agus damhsa traidisiúnta</li><li>Litríocht na Gaeilge</li></ul></div>' },
+            { id: 'foclair', icon: '📕', title: 'Foclóir & Nathanna', desc: 'Focail, frásaí, seanfhocail', lessons: 12, questions: 55, progress: 0, content: '<h2>Foclóir & Nathanna - Vocabulary & Phrases</h2><h3>Nathanna Cainte</h3><div class="key-point"><div class="key-point-title">Seanfhocail</div><ul><li>Is fearr Gaeilge briste ná Béarla cliste</li><li>Mol an óige agus tiocfaidh sí</li><li>Ní neart go cur le chéile</li><li>Tír gan teanga, tír gan anam</li></ul></div>' },
+            { id: 'stileanna', icon: '🎨', title: 'Stíleanna Scríbhneoireachta', desc: 'Réitric, stíl, teicnící', lessons: 8, questions: 38, progress: 0, content: '<h2>Stíleanna Scríbhneoireachta - Writing Styles</h2><h3>Teicnící</h3><div class="key-point"><div class="key-point-title">Tréithe</div><ul><li><strong>Tuairisciúil:</strong> Cur síos soiléir</li><li><strong>Argóinteach:</strong> Tuairimí a chosaint</li><li><strong>Cruthaitheach:</strong> Scéalta, filíocht</li><li><strong>Réiticiúil:</strong> Áitithíocht</li></ul></div>' }
         ];
 
         const flashcardsData = {
-            atomic: [
-                { q: "What is the atomic number?", a: "The number of protons in the nucleus of an atom" },
-                { q: "What is the mass number?", a: "The total number of protons and neutrons in the nucleus" },
-                { q: "What are isotopes?", a: "Atoms of the same element with different numbers of neutrons" },
-                { q: "What is electron configuration?", a: "The arrangement of electrons in energy levels and orbitals" },
-                { q: "State the Aufbau principle", a: "Electrons fill orbitals starting from the lowest energy level" },
-                { q: "What is Hund's rule?", a: "Electrons occupy orbitals singly before pairing up" },
-                { q: "What is the Pauli exclusion principle?", a: "No two electrons can have the same four quantum numbers" }
+            prois: [
+                { q: "Cé a scríobh 'An Triail'?", a: "Máiréad Ní Ghráda" },
+                { q: "Cad is téama lárnach i 'An Triail'?", a: "Éagóir na sochaí agus hipicríteacht" },
+                { q: "Cé hí Máire Ní Chathasaigh?", a: "An príomhcharachtar i 'An Triail' - bean óg nach bhfuair tacaíocht ón tsochaí" },
+                { q: "Cad is brí le 'gearrscéal'?", a: "Scéal gearr le líon beag carachtair agus plota simplí" },
+                { q: "Cad is 'téama' ann?", a: "An príomhsmaoineamh nó teachtaireacht sa téacs" },
+                { q: "Cad is 'íoróin' ann?", a: "Nuair a bhíonn difríocht idir an rud a deirtear agus an rud a chiallaítear" }
             ],
-            bonding: [
-                { q: "What is an ionic bond?", a: "A bond formed by the transfer of electrons from a metal to a non-metal" },
-                { q: "What is a covalent bond?", a: "A bond formed by the sharing of electrons between atoms" },
-                { q: "What is electronegativity?", a: "The ability of an atom to attract shared electrons in a covalent bond" },
-                { q: "What is a polar covalent bond?", a: "A covalent bond where electrons are unequally shared" },
-                { q: "What is metallic bonding?", a: "Bonding where positive ions are surrounded by delocalised electrons" },
-                { q: "What is a dative/coordinate bond?", a: "A covalent bond where both electrons come from the same atom" }
+            filiocht: [
+                { q: "Cad is 'meafar' ann?", a: "Comparáid dhíreach idir dhá rud gan 'cosúil le' nó 'mar' a úsáid" },
+                { q: "Cad is 'samhail' ann?", a: "Comparáid ag úsáid 'cosúil le' nó 'mar'" },
+                { q: "Cad is 'pearsantú' ann?", a: "Tréithe daonna a thabhairt do rudaí neamhbheo" },
+                { q: "Cad is 'uaim' ann?", a: "Athrá fuaimeanna consain ag tús focal" },
+                { q: "Cad is 'meadaracht' ann?", a: "Patrún rithimeach i línte filíochta" },
+                { q: "Cad is 'véarsa' ann?", a: "Grúpa línte i ndán" }
             ],
-            stoichiometry: [
-                { q: "What is Avogadro's number?", a: "6.022 × 10²³ - the number of particles in one mole" },
-                { q: "What is the molar mass?", a: "The mass of one mole of a substance, in g/mol" },
-                { q: "How do you calculate moles from mass?", a: "n = m / M (mass divided by molar mass)" },
-                { q: "What is a limiting reagent?", a: "The reactant that is completely consumed first" },
-                { q: "How do you calculate percentage yield?", a: "(Actual yield / Theoretical yield) × 100%" },
-                { q: "What is the molar volume of a gas at STP?", a: "22.4 L/mol (at 0°C and 1 atm)" }
+            ceapadoireacht: [
+                { q: "Conas tosú aiste phearsanta?", a: "Le ceist réiticiúil, seanfhocal, nó ráiteas suimiúil" },
+                { q: "Cad ba chóir a bheith i gconclúid aiste?", a: "Achoimre ar na príomhphointí agus tuairim phearsanta" },
+                { q: "Cad is 'díospóireacht' ann?", a: "Argóintí ar son agus i gcoinne ábhair" },
+                { q: "Conas litir fhoirmiúil a thosú?", a: "A Chara / A Dhuine Uasail" },
+                { q: "Conas litir neamhfhoirmiúil a thosú?", a: "A [ainm], Conas atá tú?" },
+                { q: "Cad is 'óráid' ann?", a: "Caint phoiblí chun lucht éisteachta a áitiú" }
             ],
-            organic: [
-                { q: "What is the general formula for alkanes?", a: "CₙH₂ₙ₊₂" },
-                { q: "What is the general formula for alkenes?", a: "CₙH₂ₙ" },
-                { q: "What is the functional group in alcohols?", a: "Hydroxyl group (-OH)" },
-                { q: "What is the functional group in carboxylic acids?", a: "Carboxyl group (-COOH)" },
-                { q: "What type of reaction do alkenes undergo?", a: "Addition reactions (across the C=C double bond)" },
-                { q: "What is esterification?", a: "The reaction between an alcohol and carboxylic acid to form an ester and water" }
+            gramadach: [
+                { q: "Cad iad na haimsirí sa Ghaeilge?", a: "Aimsir Láithreach, Chaite, Fháistineach, Ghnáthchaite, Modh Coinníollach" },
+                { q: "Conas a chuirtear séimhiú ar fhocal?", a: "Cuir 'h' tar éis an chéad chonsan (b→bh, c→ch, srl.)" },
+                { q: "Cad is 'urú' ann?", a: "Athrú ar thús focal (b→mb, c→gc, d→nd, srl.)" },
+                { q: "Cad iad na tuisil sa Ghaeilge?", a: "Ainmneach, Ginideach, Tabharthach, Gairmeach" },
+                { q: "Cad is 'briathar neamhrialta' ann?", a: "Briathar nach leanann na gnáthrialacha (bí, téigh, tar, srl.)" },
+                { q: "Cad is 'réamhfhocal' ann?", a: "Focal a thaispeánann an gaol idir focail (ar, ag, le, do, srl.)" }
             ],
-            acids: [
-                { q: "What is the Brønsted-Lowry definition of an acid?", a: "A proton (H⁺) donor" },
-                { q: "What is the Brønsted-Lowry definition of a base?", a: "A proton (H⁺) acceptor" },
-                { q: "How is pH calculated?", a: "pH = -log₁₀[H⁺]" },
-                { q: "What is a strong acid?", a: "An acid that fully dissociates in water" },
-                { q: "What is neutralisation?", a: "The reaction between an acid and a base to form salt and water" }
+            cluastuiscint: [
+                { q: "Cad ba chóir a dhéanamh roimh éisteacht?", a: "Léigh na ceisteanna ar dtús le haghaidh focail eochracha" },
+                { q: "Cén chaoi le freagraí cluastuisceana a scríobh?", a: "I d'fhocail féin más féidir, le gramadach cheart" },
+                { q: "Cad ba chóir a dhéanamh má chailleann tú freagra?", a: "Bog ar aghaidh, ná caith am ag smaoineamh air" },
+                { q: "Conas foclóir a mhéadú?", a: "Éist le TG4, Raidió na Gaeltachta, podchraoladáin" }
             ],
-            redox: [
-                { q: "What is oxidation?", a: "Loss of electrons (or gain of oxygen)" },
-                { q: "What is reduction?", a: "Gain of electrons (or loss of oxygen)" },
-                { q: "At which electrode does oxidation occur in electrolysis?", a: "At the anode (oxidation)" },
-                { q: "At which electrode does reduction occur in electrolysis?", a: "At the cathode (reduction)" },
-                { q: "What is Faraday's equation?", a: "Q = It (Charge = Current × Time)" }
+            leamhtuiscint: [
+                { q: "Cad is 'scimeáil' ann?", a: "Léitheoireacht thapa chun bun-tuiscint a fháil" },
+                { q: "Conas freagra iomlán a thabhairt?", a: "Tabhair fianaise ón téacs agus mínigh é" },
+                { q: "Cad ba chóir a dhéanamh le focail nach dtuigeann tú?", a: "Bain ciall as an gcomhthéacs timpeall orthu" },
+                { q: "Cén fáth a léitear téacs faoi dhó?", a: "Ar dtús le haghaidh tuisceana ginearálta, ansin le haghaidh mionsonraí" }
             ],
-            rates: [
-                { q: "What are five factors that affect reaction rate?", a: "Temperature, concentration, surface area, catalyst, pressure" },
-                { q: "What is activation energy?", a: "The minimum energy required for a reaction to occur" },
-                { q: "What is a catalyst?", a: "A substance that speeds up a reaction by providing an alternative pathway with lower activation energy" },
-                { q: "What is Le Chatelier's Principle?", a: "When equilibrium is disturbed, it shifts to counteract the change" },
-                { q: "What is dynamic equilibrium?", a: "When the rate of forward reaction equals the rate of reverse reaction" }
+            beal: [
+                { q: "Cad iad na codanna den scrúdú béil?", a: "Comhrá, pictiúr, sraith pictiúr" },
+                { q: "Conas cur síos a dhéanamh ar phictiúr?", a: "Déan cur síos ar an suíomh, na daoine, an aimsir, na gníomhaíochtaí" },
+                { q: "Cad ba chóir a rá faoin sraith pictiúr?", a: "Inis an scéal ó thús go deireadh, úsáid aimsirí éagsúla" },
+                { q: "Conas ullmhú don chomhrá?", a: "Cleachtadh ar thú féin, do theaghlach, do scoil, caitheamh aimsire" },
+                { q: "Cad a dhéanann tú mura dtuigeann tú ceist?", a: "Iarr ar an scrúdaitheoir an cheist a athrá: 'An bhféadfá é sin a rá arís?'" }
+            ],
+            stair: [
+                { q: "Cad is 'Gaeltacht' ann?", a: "Limistéar in Éirinn ina bhfuil an Ghaeilge mar phríomhtheanga" },
+                { q: "Cathain a bunaíodh Conradh na Gaeilge?", a: "1893 - chun an Ghaeilge a athbheochan" },
+                { q: "Cé a bhunaigh Conradh na Gaeilge?", a: "Dubhghlas de hÍde agus Eoin Mac Néill" },
+                { q: "Cad is 'athbheochan na Gaeilge' ann?", a: "An ghluaiseacht chun an Ghaeilge a thabhairt ar ais mar theanga bheo" }
+            ],
+            foclair: [
+                { q: "Cad is brí le 'Is fearr Gaeilge briste ná Béarla cliste'?", a: "Is fearr iarracht a dhéanamh le Gaeilge ná Béarla foirfe a labhairt" },
+                { q: "Cad is brí le 'Mol an óige agus tiocfaidh sí'?", a: "Má mholann tú daoine óga, éireoidh leo" },
+                { q: "Cad is brí le 'Ní neart go cur le chéile'?", a: "Níl neart i ndáiríre gan comhoibriú" },
+                { q: "Cad is brí le 'Tír gan teanga, tír gan anam'?", a: "Níl anam ag tír gan a teanga féin" },
+                { q: "Conas 'Dia duit' a fhreagairt?", a: "Dia is Muire duit" }
+            ],
+            stileanna: [
+                { q: "Cad is scríbhneoireacht thuairisciúil ann?", a: "Cur síos soiléir ar dhuine, áit nó rud" },
+                { q: "Cad is scríbhneoireacht argóinteach ann?", a: "Tuairimí a chur chun cinn agus a chosaint" },
+                { q: "Cad is scríbhneoireacht chruthaitheach ann?", a: "Scéalta, filíocht, drámaí - samhlaíocht agus mothúcháin" },
+                { q: "Cad is 'ceist réiticiúil' ann?", a: "Ceist a chuirtear chun éifeacht a chruthú, ní le haghaidh freagartha" }
             ]
         };
 
         const quizData = {
-            atomic: [
-                { q: "What particle has a positive charge?", options: ["Proton", "Neutron", "Electron", "Photon"], correct: 0, explanation: "Protons have a positive charge and are found in the nucleus." },
-                { q: "An atom with 17 protons and 18 neutrons has a mass number of:", options: ["17", "18", "35", "1"], correct: 2, explanation: "Mass number = protons + neutrons = 17 + 18 = 35" },
-                { q: "Isotopes have different numbers of:", options: ["Protons", "Electrons", "Neutrons", "All"], correct: 2, explanation: "Isotopes have the same protons but different neutrons." },
-                { q: "The electron configuration of Na (Z=11) is:", options: ["2,8", "2,8,1", "2,8,2", "1,8,2"], correct: 1, explanation: "Sodium has 11 electrons: 2 in first shell, 8 in second, 1 in third." }
+            prois: [
+                { q: "Cé a scríobh 'An Triail'?", options: ["Pádraig Ó Conaire", "Máiréad Ní Ghráda", "Máirtín Ó Cadhain", "Pádraig Mac Piarais"], correct: 1, explanation: "Scríobh Máiréad Ní Ghráda 'An Triail' i 1964." },
+                { q: "Cad is téama lárnach i 'An Triail'?", options: ["Grá", "Éagóir na sochaí", "Cogadh", "Nádúr"], correct: 1, explanation: "Is í éagóir na sochaí agus hipicríteacht téamaí lárnach an dráma." },
+                { q: "Cad is 'gearrscéal' ann?", options: ["Úrscéal fada", "Dán", "Scéal gairid", "Dráma"], correct: 2, explanation: "Is scéal gairid é gearrscéal le líon beag carachtair." },
+                { q: "Cad a tharlaíonn ag deireadh 'An Triail'?", options: ["Pósadh", "Bás Mháire", "Éalú", "Maithiúnas"], correct: 1, explanation: "Faigheann Máire bás ag deireadh an dráma." }
             ],
-            bonding: [
-                { q: "Ionic bonds typically form between:", options: ["Two metals", "Two non-metals", "A metal and non-metal", "Metalloids"], correct: 2, explanation: "Ionic bonds form when metals transfer electrons to non-metals." },
-                { q: "The shape of a water molecule is:", options: ["Linear", "Bent", "Tetrahedral", "Trigonal planar"], correct: 1, explanation: "Water has a bent shape due to two bonding pairs and two lone pairs." },
-                { q: "The most electronegative element is:", options: ["Oxygen", "Chlorine", "Fluorine", "Nitrogen"], correct: 2, explanation: "Fluorine has the highest electronegativity (3.98)." }
+            filiocht: [
+                { q: "Cad is 'meafar' ann?", options: ["Comparáid le 'mar'", "Comparáid dhíreach", "Rím", "Véarsa"], correct: 1, explanation: "Is comparáid dhíreach é meafar gan 'cosúil le' nó 'mar'." },
+                { q: "Cad is 'uaim' ann?", options: ["Rím ag deireadh línte", "Athrá fuaimeanna consain", "Patrún rithimeach", "Véarsa"], correct: 1, explanation: "Is é uaim athrá fuaimeanna consain ag tús focal." },
+                { q: "Cad is 'pearsantú' ann?", options: ["Aibhéil", "Tréithe daonna do rudaí", "Comparáid", "Íomhá"], correct: 1, explanation: "Tugann pearsantú tréithe daonna do rudaí neamhbheo." },
+                { q: "Cad is 'véarsa' ann?", options: ["Líne amháin", "Grúpa línte", "An dán iomlán", "Meadaracht"], correct: 1, explanation: "Is grúpa línte i ndán é véarsa." }
             ],
-            stoichiometry: [
-                { q: "How many moles are in 36g of water (H₂O)?", options: ["1 mol", "2 mol", "18 mol", "0.5 mol"], correct: 1, explanation: "Molar mass of H₂O = 18 g/mol. n = 36/18 = 2 mol" },
-                { q: "At STP, what volume does 0.5 mol of gas occupy?", options: ["11.2 L", "22.4 L", "44.8 L", "5.6 L"], correct: 0, explanation: "At STP, 1 mol = 22.4 L, so 0.5 mol = 11.2 L" },
-                { q: "What is the molar mass of CaCO₃?", options: ["60 g/mol", "84 g/mol", "100 g/mol", "112 g/mol"], correct: 2, explanation: "M = 40 + 12 + 3(16) = 100 g/mol" }
+            ceapadoireacht: [
+                { q: "Conas litir fhoirmiúil a thosú?", options: ["A chara", "Haigh", "A Dhuine Uasail", "Dia duit"], correct: 2, explanation: "Tosaítear litir fhoirmiúil le 'A Dhuine Uasail' nó 'A Chara'." },
+                { q: "Cad ba chóir a bheith ag deireadh aiste?", options: ["Ceist", "Achoimre agus tuairim", "Liosta", "Dán"], correct: 1, explanation: "Ba chóir achoimre ar na príomhphointí agus tuairim phearsanta a bheith sa chonclúid." },
+                { q: "Cad is 'díospóireacht' ann?", options: ["Scéal", "Argóintí ar son/i gcoinne", "Litir", "Dán"], correct: 1, explanation: "Is argóintí ar son agus i gcoinne ábhair í díospóireacht." }
             ],
-            organic: [
-                { q: "Which is the correct formula for propane?", options: ["C₂H₆", "C₃H₆", "C₃H₈", "C₄H₈"], correct: 2, explanation: "Propane is an alkane: CₙH₂ₙ₊₂ = C₃H₈" },
-                { q: "What is produced when alcohol reacts with carboxylic acid?", options: ["Aldehyde", "Ketone", "Ester", "Ether"], correct: 2, explanation: "Alcohol + carboxylic acid → ester + water" },
-                { q: "Alkenes undergo which type of reaction with bromine?", options: ["Substitution", "Elimination", "Addition", "Condensation"], correct: 2, explanation: "Alkenes undergo addition reactions across the double bond." }
+            gramadach: [
+                { q: "Cad is 'séimhiú' ann?", options: ["'h' tar éis consan", "Athrú ar ghuta", "Urú", "Fada"], correct: 0, explanation: "Cuirtear 'h' tar éis an chéad chonsan le séimhiú (b→bh)." },
+                { q: "Cad is 'urú' ann?", options: ["'h' a chur isteach", "Athrú ar thús focal (b→mb)", "Rím", "Focal nua"], correct: 1, explanation: "Athraíonn urú tús an fhocail (b→mb, c→gc, d→nd)." },
+                { q: "Cé mhéad tuiseal atá sa Ghaeilge?", options: ["2", "3", "4", "5"], correct: 2, explanation: "Tá 4 tuiseal: Ainmneach, Ginideach, Tabharthach, Gairmeach." },
+                { q: "'Bhí mé' - cén aimsir?", options: ["Láithreach", "Fháistineach", "Chaite", "Gnáthchaite"], correct: 2, explanation: "Is í an Aimsir Chaite 'Bhí mé'." }
             ],
-            acids: [
-                { q: "What is the pH of a solution with [H⁺] = 0.001 M?", options: ["1", "2", "3", "4"], correct: 2, explanation: "pH = -log₁₀(0.001) = 3" },
-                { q: "Which is a strong acid?", options: ["Ethanoic acid", "Carbonic acid", "Hydrochloric acid", "Citric acid"], correct: 2, explanation: "HCl is a strong acid that fully dissociates." },
-                { q: "What is formed when NaOH reacts with HCl?", options: ["NaCl + H₂O", "NaCl + H₂", "NaH + ClO", "Na + HClO"], correct: 0, explanation: "NaOH + HCl → NaCl + H₂O (neutralisation)" }
+            cluastuiscint: [
+                { q: "Cad ba chóir a dhéanamh ar dtús sa chluastuiscint?", options: ["Éist díreach", "Léigh na ceisteanna", "Scríobh nótaí", "Codladh"], correct: 1, explanation: "Léigh na ceisteanna ar dtús chun a bheith ullamh." },
+                { q: "Má chailleann tú freagra, cad a dhéanfá?", options: ["Stop", "Bog ar aghaidh", "Tosaigh arís", "Iarr cabhair"], correct: 1, explanation: "Bog ar aghaidh agus díriú ar an gcéad cheist eile." }
             ],
-            redox: [
-                { q: "In Zn + Cu²⁺ → Zn²⁺ + Cu, zinc is:", options: ["Oxidised", "Reduced", "Neither", "Both"], correct: 0, explanation: "Zinc loses electrons (Zn → Zn²⁺ + 2e⁻), so it is oxidised." },
-                { q: "At which electrode does oxidation occur in electrolysis?", options: ["Cathode", "Anode", "Both", "Neither"], correct: 1, explanation: "Oxidation always occurs at the anode (AN OX)." },
-                { q: "What is the oxidation state of S in H₂SO₄?", options: ["+2", "+4", "+6", "-2"], correct: 2, explanation: "2(+1) + S + 4(-2) = 0, so S = +6" }
+            leamhtuiscint: [
+                { q: "Cad is 'scimeáil' ann?", options: ["Léitheoireacht mhall", "Léitheoireacht thapa", "Scríbhneoireacht", "Éisteacht"], correct: 1, explanation: "Is léitheoireacht thapa í scimeáil chun bun-tuiscint a fháil." },
+                { q: "Conas freagra maith a thabhairt?", options: ["Focal amháin", "Fianaise + míniú", "Cóipeáil", "Béarla"], correct: 1, explanation: "Tabhair fianaise ón téacs agus mínigh é i d'fhocail féin." }
             ],
-            rates: [
-                { q: "Increasing temperature increases rate because:", options: ["More energetic collisions", "Lower activation energy", "Better catalyst", "Equilibrium shifts"], correct: 0, explanation: "Higher temperature means faster particles with more kinetic energy." },
-                { q: "A catalyst works by:", options: ["Increasing temperature", "Providing alternative pathway", "Increasing concentration", "Shifting equilibrium"], correct: 1, explanation: "Catalysts provide an alternative pathway with lower activation energy." },
-                { q: "For an exothermic reaction, increasing temperature will:", options: ["Shift right", "Shift left", "No effect", "Stop reaction"], correct: 1, explanation: "By Le Chatelier's principle, heating favours the endothermic (reverse) direction." }
+            beal: [
+                { q: "Cad iad codanna an scrúdú béil?", options: ["Léitheoireacht", "Comhrá, pictiúr, sraith", "Scríbhneoireacht", "Gramadach"], correct: 1, explanation: "Tá comhrá, pictiúr agus sraith pictiúr sa scrúdú béil." },
+                { q: "Mura dtuigeann tú ceist, cad a déarfá?", options: ["Freagair go díreach", "Fan ciúin", "'An bhféadfá é sin a rá arís?'", "Imigh"], correct: 2, explanation: "Iarr ar an scrúdaitheoir an cheist a athrá go béasach." }
+            ],
+            stair: [
+                { q: "Cathain a bunaíodh Conradh na Gaeilge?", options: ["1893", "1916", "1922", "1798"], correct: 0, explanation: "Bunaíodh Conradh na Gaeilge i 1893." },
+                { q: "Cé a bhunaigh Conradh na Gaeilge?", options: ["Pádraig Mac Piarais", "Dubhghlas de hÍde", "Éamon de Valera", "Micheál Ó Coileáin"], correct: 1, explanation: "Bhunaigh Dubhghlas de hÍde Conradh na Gaeilge." }
+            ],
+            foclair: [
+                { q: "Cad is brí le 'Tír gan teanga, tír gan anam'?", options: ["Tá gach tír difriúil", "Níl anam gan teanga", "Tá teanga tábhachtach", "Níl baint aige"], correct: 1, explanation: "Ciallaíonn sé nach bhfuil anam ag tír gan a teanga féin." },
+                { q: "Conas 'Dia duit' a fhreagairt?", options: ["Go raibh maith agat", "Dia is Muire duit", "Slán", "Tá mé go maith"], correct: 1, explanation: "Freagraítear 'Dia duit' le 'Dia is Muire duit'." }
+            ],
+            stileanna: [
+                { q: "Cad is scríbhneoireacht thuairisciúil ann?", options: ["Argóintí", "Cur síos soiléir", "Scéalta", "Dánta"], correct: 1, explanation: "Is cur síos soiléir ar dhuine, áit nó rud í scríbhneoireacht thuairisciúil." },
+                { q: "Cad is 'ceist réiticiúil' ann?", options: ["Ceist le haghaidh freagra", "Ceist chun éifeacht", "Ceist mhaith", "Ceist éasca"], correct: 1, explanation: "Cuirtear ceist réiticiúil chun éifeacht a chruthú, ní le haghaidh freagartha." }
             ]
         };
 
         const formulasData = [
-            { name: "Number of moles", equation: "n = m / M", desc: "Calculate moles from mass and molar mass", vars: "n = moles, m = mass (g), M = molar mass (g/mol)", category: "stoich" },
-            { name: "Concentration", equation: "C = n / V", desc: "Calculate molarity from moles and volume", vars: "C = concentration (M), n = moles, V = volume (L)", category: "stoich" },
-            { name: "Dilution", equation: "C₁V₁ = C₂V₂", desc: "Calculate dilution concentrations/volumes", vars: "C = concentration, V = volume", category: "stoich" },
-            { name: "Percentage Yield", equation: "% = (Actual / Theoretical) × 100", desc: "Calculate reaction efficiency", vars: "Actual = experimental, Theoretical = calculated", category: "stoich" },
-            { name: "Ideal Gas Equation", equation: "PV = nRT", desc: "Relates pressure, volume, moles and temperature", vars: "P = pressure, V = volume, n = moles, R = 8.314, T = temp (K)", category: "gas" },
-            { name: "Boyle's Law", equation: "P₁V₁ = P₂V₂", desc: "Pressure-volume at constant temperature", vars: "P = pressure, V = volume", category: "gas" },
-            { name: "Charles's Law", equation: "V₁/T₁ = V₂/T₂", desc: "Volume-temperature at constant pressure", vars: "V = volume, T = temperature (K)", category: "gas" },
-            { name: "pH", equation: "pH = -log₁₀[H⁺]", desc: "Calculate pH from hydrogen ion concentration", vars: "[H⁺] = hydrogen ion concentration (M)", category: "acids" },
-            { name: "pOH", equation: "pOH = -log₁₀[OH⁻]", desc: "Calculate pOH from hydroxide ion concentration", vars: "[OH⁻] = hydroxide ion concentration (M)", category: "acids" },
-            { name: "pH + pOH", equation: "pH + pOH = 14", desc: "Relationship at 25°C", vars: "At 25°C, pKw = 14", category: "acids" },
-            { name: "Heat Energy", equation: "q = mcΔT", desc: "Calculate heat in calorimetry", vars: "q = heat (J), m = mass (g), c = specific heat, ΔT = temp change", category: "thermo" },
-            { name: "Enthalpy of Reaction", equation: "ΔH = ΣΔHf(products) - ΣΔHf(reactants)", desc: "Using formation enthalpies", vars: "ΔHf = enthalpy of formation", category: "thermo" },
-            { name: "Faraday's Law", equation: "Q = It", desc: "Charge transferred in electrolysis", vars: "Q = charge (C), I = current (A), t = time (s)", category: "redox" },
-            { name: "Equilibrium Constant", equation: "Kc = [products]ᵖ / [reactants]ʳ", desc: "Equilibrium expression", vars: "Concentrations raised to stoichiometric coefficients", category: "rates" }
+            { name: "Struchtúr Aiste", equation: "Réamhrá → Corp → Críoch", desc: "Leagan amach bunúsach aiste", vars: "Réamhrá: tús suimiúil; Corp: príomhphointí; Críoch: achoimre", category: "ceapadoireacht" },
+            { name: "Na hAimsirí", equation: "Láithreach → Chaite → Fháistineach", desc: "Na príomhaimsirí", vars: "Tá/Bím → Bhí → Beidh", category: "gramadach" },
+            { name: "Séimhiú", equation: "Consan + h", desc: "Athrú ar thús focal", vars: "b→bh, c→ch, d→dh, f→fh, g→gh, m→mh, p→ph, s→sh, t→th", category: "gramadach" },
+            { name: "Urú", equation: "Consan nua + consan", desc: "Athrú ar thús focal", vars: "b→mb, c→gc, d→nd, f→bhf, g→ng, p→bp, t→dt", category: "gramadach" },
+            { name: "Na Tuisil", equation: "Ainm → Gin → Tabh → Gairm", desc: "Na ceithre thuiseal", vars: "Ainmneach, Ginideach, Tabharthach, Gairmeach", category: "gramadach" },
+            { name: "Struchtúr Díospóireachta", equation: "Ar Son + I gCoinne + Críoch", desc: "Leagan amach díospóireachta", vars: "Argóintí ar gach taobh, ansin conclúid", category: "ceapadoireacht" },
+            { name: "Anailís ar Dhán", equation: "Téama + Teicnící + Éifeacht", desc: "Conas dán a anailísiú", vars: "Cad atá á rá, conas, agus cén fáth", category: "filiocht" },
+            { name: "Litir Fhoirmiúil", equation: "Seoladh → Dáta → A Dhuine Uasail → Corp → Mise le meas", desc: "Formáid litreach foirmiúla", vars: "Leagan amach oifigiúil", category: "ceapadoireacht" },
+            { name: "Comhrá - Scrúdú Béil", equation: "Tú Féin + Teaghlach + Scoil + Caitheamh Aimsire", desc: "Ábhair choitianta sa chomhrá", vars: "Ullmhaigh na hábhair seo go maith", category: "beal" },
+            { name: "Cur Síos ar Phictiúr", equation: "Suíomh + Daoine + Aimsir + Gníomhaíochtaí", desc: "Conas cur síos a dhéanamh", vars: "Cá bhfuil sé, cé atá ann, cad atá ag tarlú", category: "beal" },
+            { name: "An Briathar 'Bí'", equation: "Tá/Níl + Bím/Ní bhím + Bhí/Ní raibh + Beidh/Ní bheidh", desc: "Foirmeacha an bhriathair 'bí'", vars: "An briathar is tábhachtaí", category: "gramadach" },
+            { name: "Réamhfhocail + Forainmneacha", equation: "ag + mé = agam", desc: "Réamhfhocail fhoircneacha", vars: "agam, agat, aige, aici, againn, agaibh, acu", category: "gramadach" },
+            { name: "Nathanna Cainte", equation: "Seanfhocal + Comhthéacs", desc: "Úsáid nathanna go héifeachtach", vars: "Úsáid seanfhocail agus nathanna in aistí", category: "ceapadoireacht" },
+            { name: "Léamhthuiscint", equation: "Scimeáil → Léigh → Freagair → Seiceáil", desc: "Straitéis léamhthuisceana", vars: "Léigh go tapa, ansin go cúramach", category: "leamhtuiscint" }
         ];
 
         const experimentsData = [
-            { id: 1, title: "Flame Tests", badge: "Inorganic", icon: "🔥", desc: "Identify metal ions by flame colour" },
-            { id: 2, title: "Titration (Acid-Base)", badge: "Quantitative", icon: "🧪", desc: "Determine concentration by neutralisation" },
-            { id: 3, title: "Rate of Reaction", badge: "Kinetics", icon: "⏱️", desc: "Measure effect of concentration on rate" },
-            { id: 4, title: "Preparation of Ethene", badge: "Organic", icon: "🧬", desc: "Dehydration of ethanol" },
-            { id: 5, title: "Esterification", badge: "Organic", icon: "🍎", desc: "Prepare an ester from alcohol and acid" },
-            { id: 6, title: "Electrolysis of Water", badge: "Electrochemistry", icon: "⚡", desc: "Decompose water into H₂ and O₂" },
-            { id: 7, title: "Heat of Reaction", badge: "Thermochemistry", icon: "🌡️", desc: "Measure enthalpy of neutralisation" },
-            { id: 8, title: "Tests for Anions", badge: "Analytical", icon: "🔬", desc: "Identify carbonate, sulfate, chloride" }
+            { id: 1, title: "Cleachtadh Comhrá", badge: "Scrúdú Béil", icon: "🗣️", desc: "Cleachtadh comhrá le cairde nó múinteoirí" },
+            { id: 2, title: "Anailís Dáin", badge: "Filíocht", icon: "📜", desc: "Anailísigh dán ag úsáid teicnící filíochta" },
+            { id: 3, title: "Scríobh Aiste", badge: "Ceapadóireacht", icon: "✍️", desc: "Cleachtadh aiste ar ábhar roghnaithe" },
+            { id: 4, title: "Éisteacht le TG4", badge: "Cluastuiscint", icon: "📺", desc: "Féach ar chláir TG4 gan fotheidil" },
+            { id: 5, title: "Léigh Tuairisc", badge: "Léamhthuiscint", icon: "📰", desc: "Léigh alt as Tuairisc.ie nó Nós" },
+            { id: 6, title: "Cleachtadh Sraith Pictiúr", badge: "Scrúdú Béil", icon: "🖼️", desc: "Inis scéal bunaithe ar íomhánna" },
+            { id: 7, title: "Gramadach - Briathra", badge: "Gramadach", icon: "📚", desc: "Cleachtadh ar bhriathra neamhrialta" },
+            { id: 8, title: "Foclóir Nua", badge: "Foclóir", icon: "📕", desc: "Foghlaim 10 bhfocal nua gach lá" }
         ];
 
         // ==================== STATE ====================
